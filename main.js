@@ -1,5 +1,6 @@
-// Утилиты
 
+let tg = window.Telegram.WebApp;
+// Утилиты
 function toNum(str) {
   const num = Number(str.replace(/ /g, ""));
   return num;
@@ -15,7 +16,6 @@ function toCurrency(num) {
 }
 
 // Корзина
-
 const cardAddArr = Array.from(document.querySelectorAll(".card__add"));
 const cartNum = document.querySelector("#cart_num");
 const cart = document.querySelector("#cart");
@@ -172,14 +172,14 @@ popupClose.addEventListener("click", (e) => {
 });
 
 
-let popup__buy_btn = document.getElementById("popup__buy");
-popup__buy_btn.addEventListener("click", () =>{
-  let popup_cost_discount = document.getElementById("popup_cost_discount").value;
-  
-  let data = {
-    price: popup_cost_discount
+let popup__buy = document.getElementById("popup__buy");
+
+popup__buy.addEventListener("click", () => {
+  let price = document.getElementById("popup_cost_discount").value;
+
+  data = {
+    price: price
   }
   tg.sendData(JSON.stringify(data));
-
   tg.close();
 });
