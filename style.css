@@ -154,7 +154,7 @@ footer {
   flex: 0 0 50%;
 }
 .card__price:after {
-  content: "₽";
+  content: "$";
   margin-left: 4px;
   position: relative;
 }
