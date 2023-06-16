@@ -160,7 +160,7 @@ footer {
 }
 .card__price--discount {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--tg-theme-hint-color);
   display: flex;
   flex-wrap: wrap-reverse;
@@ -173,7 +173,7 @@ footer {
 }
 .card__price--common {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--tg-theme-hint-color);
   display: flex;
   flex-wrap: wrap-reverse;
