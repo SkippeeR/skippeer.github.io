@@ -1,4 +1,3 @@
-
 let tg = window.Telegram.WebApp;
 // Утилиты
 function toNum(str) {
@@ -8,8 +7,8 @@ function toNum(str) {
 
 function toCurrency(num) {
   const format = new Intl.NumberFormat("ru-RU", {
-    style: "currency",
-    currency: "RUB",
+    /*style: "currency",
+    currency: "RUB",*/
     minimumFractionDigits: 0,
   }).format(num);
   return format;
@@ -176,9 +175,11 @@ let popup__buy = document.getElementById("popup__buy");
 
 popup__buy.addEventListener("click", () => {
   let price = document.getElementById("popup_cost_discount").value;
+  let name = document.querySelector(".popup__product-title").innerHTML;
 
   data = {
-    price: price
+    price: price,
+    name: name
   }
   tg.sendData(JSON.stringify(data));
   tg.close();
